@@ -4,7 +4,7 @@ export const authEndpoint = 'https://accounts.spotify.com/authorize';
 export const clientId = process.env.REACT_APP_CLIENT_ID;
 export const redirectUri = window.location.hostname === 'localhost'
     ? 'http://localhost:3000/callback'
-    : 'https://musicffy-prod.herokuapp.com/callback';
+    : 'https://secure-shore-30794.herokuapp.com/callback';
 export const scopes = [
   'user-read-email',
   'user-read-private',
