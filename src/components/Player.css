@@ -1,0 +1,232 @@
+.player {
+    position: relative; /* set the parent element to relative */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 60px;
+    margin: 20px;
+  }
+  .track-info {
+    position: relative;
+    top: -43px;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .artist {
+    font-size: 1.5rem;
+    font-style: italic;
+  }
+  
+  .album {
+    font-size: 1rem;
+    color: #999;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  .controls button {
+    position: relative;
+    background-color: #1db954;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    left: 73px;
+    top: -33px;
+  }
+  
+  .controls button:hover {
+    background-color: #1ed760;
+  }
+  
+  .progress-bar-wrapper {
+    position: relative;
+    width: 110%;
+    height: 10px; /* increase height */
+    background-color: black;
+    border-radius: 4px;
+    top: 10px;
+    left: -140px;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    border-radius: 5px;
+    ;
+  }
+  
+  .progress-bar-fill {
+    height: 100%;
+    background-color: #1db954;
+    border-radius: 5px;
+  }
+  
+  .progress-bar-thumb {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #1db954;
+    cursor: pointer;
+    z-index: 1;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .progress-bar-thumb:active {
+    transform: scale(1.4);
+  }
+  
+  .progress-bar span {
+    font-size: 1rem;
+    margin-left: 20px;
+    color: #1db954;
+  }
+  
+  .c-time {
+    position: relative;
+    right: 170px;
+    top: 10px;
+  }
+  
+  .dur {
+    position: relative;
+    left: -80px;
+    top: 9px;
+  }
+  
+  .v-title {
+    position: relative;
+    right: -70px;
+    color: #1db954;
+  }
+  
+  .volume-bar {
+    position: absolute; /* position the volume-bar absolutely */
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    padding: 5px;
+  }
+  .volume-bar-thumb {
+    position: absolute;
+    top: -6px;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #1db954;
+    cursor: pointer;
+    z-index: 2;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .volume-bar input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    background: #1db954;
+    outline: none;
+    border-radius: 5px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .volume-bar input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.75);
+    transform-origin: center;
+  }
+  
+  .volume-bar input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.75);
+  }
+  
+  .volume-bar input[type="range"]::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.75);
+  }
+  
+  .volume-bar input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 4px;
+    background: #1db954;
+    border-radius: 5px;
+  }
+  
+  .volume-bar input[type="range"]::-ms-track {
+    width: 100%;
+    height: 4px;
+    background: #1db954;
+    border-radius: 5px;
+  }
+  
+  .volume-bar input[type="range"]::-ms-fill-lower {
+    background: #1db954;
+    border-radius: 5px;
+  }
+  
+  .volume-bar input[type="range"]::-ms-fill-upper {
+    background: #999;
+    border-radius: 5px;
+  }
+  
+  /* Hide the default thumb */
+  input[type="range"]::-webkit-slider-thumb {
+    display: none;
+  }
+  input[type="range"]::-moz-range-thumb {
+    display: none;
+  }
+  input[type="range"]::-ms-thumb {
+    display: none;
+  }
+  
+  /* Show the volume thumb */
+  .volume-bar input[type="range"]::-webkit-slider-thumb {
+    display: block;
+  }
+  .volume-bar input[type="range"]::-moz-range-thumb {
+    display: block;
+  }
+  .volume-bar input[type="range"]::-ms-thumb {
+    display: block;
+  }
+  
